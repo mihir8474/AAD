@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Knapsack Results</title>
+</head>
+<body>
+    <h2>Results</h2>
+    <p>Total Value: {{ max_value }}</p>
+    <h3>Items Taken:</h3>
+    <table border="1">
+        <tr>
+            <th>Item</th>
+            <th>Value</th>
+            <th>Weight</th>
+            <th>Fraction Taken</th>
+        </tr>
+        {% for item, value, weight, fraction in contents %}
+        <tr>
+            <td>{{ item }}</td>
+            <td>{{ value }}</td>
+            <td>{{ weight }}</td>
+            <td>{{ fraction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fractional Knapsack Solver</title>
+</head>
+
+<body>
+    <h2>Fractional Knapsack Solver</h2>
+    <form action="/solve" method="POST">
+        <label for="n">Number of Items:</label>
+        <input type="number" name="n" id="n" required><br><br>
+        <label for="capacity">Knapsack Capacity:</label>
+        <input type="number" step="any" name="capacity" id="capacity" required><br><br>
+        <h3>Enter the Values and Weights of Items:</h3>
+        <div id="items">
+            <div class="item">
+                <label for="values">Values (separated by space):</label>
+                <input type="text" name="values" id="values" required><br><br>
+
+                <label for="weights">Weights (separated by space):</label>
+                <input type="text" name="weights" id="weights" required><br><br>
+            </div>
+        </div>
+        <button type="submit">Solve</button>
+    </form>
+</body>
+
+</html>

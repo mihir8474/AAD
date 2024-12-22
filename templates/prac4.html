@@ -1,0 +1,16 @@
+<html>
+<title>Employee Search Analysis</title>
+</head>
+<body>
+<h1>Employee Search Analysis</h1>
+<h2>Results</h2>
+<ul>
+<li><strong>Designation with the Highest Salary:</strong> {{ highest_salary_designation }}</li>
+<li><strong>Employee with the Lowest Salary:</strong> {{ lowest_salary_name }}</li>
+<li><strong>Mobile Number of the Youngest Employee:</strong> {{ youngest_mobile }}</li>
+<li><strong>Salary of the Oldest Employee:</strong> {{ oldest_salary }}</li>
+</ul>
+<h2>Search Time Analysis</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Time Taken vs Number of Elements">
+</body>
+</html>

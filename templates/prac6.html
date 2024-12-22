@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Chain Multiplication</title>
+</head>
+<body>
+    <h1>Matrix Chain Multiplication</h1>
+    <form method="post">
+        <label for="dimensions">Enter matrix dimensions
+            (comma-separated):</label>
+        <input type="text" id="dimensions" name="dimensions" placeholder="e.g., 5,10,3,12,5,50,6">
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+    <h2>Results:</h2>
+    <p><strong>Minimum number of multiplications:</strong> {{
+        result.min_cost }}</p>
+    <p><strong>Optimal parenthesization:</strong> {{
+        result.optimal_solution }}</p>
+    <h2>Dynamic Programming Table:</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                {% for i in range(result.m_table|length) %}
+                <th>A{{ i + 1 }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(result.m_table|length) %}
+            <tr>
+                {% for j in range(result.m_table[i]|length) %}
+                <td>
+                    {% if result.m_table[i][j] is not none %}
+                    {{ result.m_table[i][j] }}
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body> 
+</html>
